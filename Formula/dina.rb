@@ -5,21 +5,21 @@
 class Dina < Formula
   desc "CLI for the Dina platform"
   homepage "https://github.com/dinacomputer/cli"
-  version "0.0.2"
+  version "0.0.3"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/dinacomputer/cli/releases/download/v0.0.2/dina_0.0.2_darwin_amd64.tar.gz"
-      sha256 "16ec89196eb123cfd0b05475579af111c7cb7ef1f09987fab6b69b900c895b5b"
+      url "https://github.com/dinacomputer/cli/releases/download/v0.0.3/dina_0.0.3_darwin_amd64.tar.gz"
+      sha256 "a1d825e37138ce5378f4ff5fb7b3cb058d62838c23420b6f436b8541a62d2899"
 
       define_method(:install) do
         bin.install "dina"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/dinacomputer/cli/releases/download/v0.0.2/dina_0.0.2_darwin_arm64.tar.gz"
-      sha256 "aba2c1e2dae6bc02ce94aed0dc9acba930fd138a87a6447cae4bdbe9dbb86474"
+      url "https://github.com/dinacomputer/cli/releases/download/v0.0.3/dina_0.0.3_darwin_arm64.tar.gz"
+      sha256 "4fbe47b6e230ebff50950de290d24ecb74db698d8e50accdb59137fbf460341d"
 
       define_method(:install) do
         bin.install "dina"
@@ -29,15 +29,15 @@ class Dina < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dinacomputer/cli/releases/download/v0.0.2/dina_0.0.2_linux_amd64.tar.gz"
-      sha256 "26d73dd269a4a901c2f4f0030406a0a516aa2119f411bfd77e86359b2fae190e"
+      url "https://github.com/dinacomputer/cli/releases/download/v0.0.3/dina_0.0.3_linux_amd64.tar.gz"
+      sha256 "f40ead3cc50d2e61825bf92f40bc6e77d0292ad76ed04e81ecc7d4efbc4ea034"
       define_method(:install) do
         bin.install "dina"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dinacomputer/cli/releases/download/v0.0.2/dina_0.0.2_linux_arm64.tar.gz"
-      sha256 "24986c9eab282e66b80c6774d16f51c3728381ceda6cbb522c3697362c6a70c1"
+      url "https://github.com/dinacomputer/cli/releases/download/v0.0.3/dina_0.0.3_linux_arm64.tar.gz"
+      sha256 "2ee917b2eed3828a827b899ade5eb672a59fb1e41192a26ec80bd40c4705f9e2"
       define_method(:install) do
         bin.install "dina"
       end
